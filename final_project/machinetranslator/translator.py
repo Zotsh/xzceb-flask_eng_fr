@@ -21,6 +21,13 @@ def englishToFrench(englishText):
     return frenchText
 
 
+def frenchToEnglish(frenchText):
+    translation = language_translator.translate(text=[frenchText], model_id='fr-en').get_result()
+    englishText = translation['translations'][0]['translation']
+    return englishText
+
+
 if __name__ == "__main__":
     # Prepare the Authenticator
     print(englishToFrench('I am doing just fine'))
+    print(frenchToEnglish('Je ne fais que très bien'))
