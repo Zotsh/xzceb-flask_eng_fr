@@ -1,21 +1,21 @@
 import unittest
-from .translator import englishToFrench, frenchToEnglish
+from .translator import english_to_french, french_to_english
 
 
 class TestMethods(unittest.TestCase):
 
     def testNullEnglishToFrench(self):
-        nullEnglish = englishToFrench(None)
+        nullEnglish = english_to_french(None)
         self.assertIsNone(nullEnglish)
 
     def testNullToFrenchEnglish(self):
-        nullFrench = frenchToEnglish(None)
+        nullFrench = french_to_english(None)
         self.assertIsNone(nullFrench)
 
     def testHelloEnglishToFrench(self):
-        helloToFrench = englishToFrench('Hello')
+        helloToFrench = english_to_french('Hello')
         self.assertEqual(helloToFrench, 'Bonjour')
 
     def testBonjourToFrenchEnglish(self):
-        bonjourInEnglish = frenchToEnglish("Bonjour")
+        bonjourInEnglish = french_to_english("Bonjour")
         self.assertEqual(bonjourInEnglish, 'Hello')
