@@ -1,25 +1,21 @@
 import unittest
-<<<<<<<< HEAD:final_project/machinetranslator/tests/tests.py
-from final_project.machinetranslator.translator import english_to_french, french_to_english
-========
 from final_project.machinetranslation.translator import english_to_french, french_to_english
->>>>>>>> b6fb093 (package_folder_structure):final_project/machinetranslation/tests/tests.py
 
 
 class TestMethods(unittest.TestCase):
 
-    def testNullEnglishToFrench(self):
-        nullEnglish = english_to_french(None)
-        self.assertIsNone(nullEnglish)
+    def test_NullEnglishToFrench(self):
+        null_english = english_to_french(None)
+        self.assertEqual(null_english, "")
 
-    def testNullToFrenchEnglish(self):
-        nullFrench = french_to_english(None)
-        self.assertIsNone(nullFrench)
+    def test_NullToFrenchEnglish(self):
+        null_french = french_to_english(None)
+        self.assertEqual(null_french, "")
 
-    def testHelloEnglishToFrench(self):
-        helloToFrench = english_to_french('Hello')
-        self.assertEqual(helloToFrench, 'Bonjour')
+    def test_HelloEnglishToFrench(self):
+        hello_to_french = english_to_french('Hello')
+        self.assertEqual(hello_to_french, 'Bonjour')
 
-    def testBonjourToFrenchEnglish(self):
-        bonjourInEnglish = french_to_english("Bonjour")
-        self.assertEqual(bonjourInEnglish, 'Hello')
+    def test_BonjourToFrenchEnglish(self):
+        bonjour_in_english = french_to_english("Bonjour")
+        self.assertEqual(bonjour_in_english, 'Hello')
