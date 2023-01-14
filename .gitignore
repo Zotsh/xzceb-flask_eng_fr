@@ -65,11 +65,15 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
+# Databases stuff:
+LimitRecommendations.db
+
 # Scrapy stuff:
 .scrapy
 
 # Sphinx documentation
 docs/_build/
+docs/*/build
 
 # PyBuilder
 target/
@@ -102,7 +106,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+final_project/machinetranslation/.env
 .venv
 env/
 venv/
@@ -127,3 +131,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Log files
+/logs/*
+
+#virtual environment
+/python_local/
+
+# ide settings
+/.idea
+
+# project files
+/global_configuration.json

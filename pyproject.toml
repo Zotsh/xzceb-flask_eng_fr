@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "english-french-translation-app"
+version = "0.1.0"
+description = ""
+authors = ["Mduduzi Mlilo <MDUDUZI.MLILO@HOTMAIL.COM>"]
+readme = "README.md"
+packages = [{include = "english_french_translation_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ibm-watson = "^6.1.0"
+flask = "^2.2.2"
+python-dotenv = "^0.21.0"
+pylint = "^2.15.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
