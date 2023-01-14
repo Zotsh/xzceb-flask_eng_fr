@@ -106,7 +106,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-final_project/machinetranslator/.env
+final_project/machinetranslation/.env
 .venv
 env/
 venv/
