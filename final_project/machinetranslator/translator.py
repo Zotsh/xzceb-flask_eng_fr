@@ -16,12 +16,16 @@ language_translator.set_service_url(api_url)
 
 
 def englishToFrench(englishText):
+    if englishText is None:
+        return None
     translation = language_translator.translate(text=[englishText], model_id='en-fr').get_result()
     frenchText = translation['translations'][0]['translation']
     return frenchText
 
 
 def frenchToEnglish(frenchText):
+    if frenchText is None:
+        return None
     translation = language_translator.translate(text=[frenchText], model_id='fr-en').get_result()
     englishText = translation['translations'][0]['translation']
     return englishText
