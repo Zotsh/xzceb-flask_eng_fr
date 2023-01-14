@@ -2,7 +2,7 @@ from machinetranslation import translator
 from flask import Flask, render_template, request
 import json
 
-app = Flask("Web Translator")
+app = Flask("Web Translator", template_folder='templates')
 
 
 @app.route("/english_to_french")
@@ -12,7 +12,7 @@ def englishToFrench():
 
 
 @app.route("/french_to_english")
-def french_to_english():
+def frenchToEnglish():
     text_to_translate = request.args.get('textToTranslate')
     return translator.french_to_english(text_to_translate)
 

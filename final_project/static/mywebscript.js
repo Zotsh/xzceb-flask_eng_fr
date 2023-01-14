@@ -2,6 +2,7 @@ let translateToFrench = ()=>{
     textToTranslate = document.getElementById("textToTranslate").value;
 
     let xhttp = new XMLHttpRequest();
+//    debugger;
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("translated_text").innerHTML = xhttp.responseText;
@@ -23,4 +24,3 @@ let translateToEnglish = ()=>{
     xhttp.open("GET", "frenchToEnglish?textToTranslate"+"="+textToTranslate, true);
     xhttp.send();
 }
-
